@@ -7,6 +7,10 @@ function App() {
       <h1> Hi, Welcome to Synthetic.ai</h1>
       
       <TextField className="textbox-link" label="Enter link" variant="outlined" />
+      
+      <div className="btn">
+        <button className="submitBtn">Submit</button>
+      </div>
     </div>
   );
 }
