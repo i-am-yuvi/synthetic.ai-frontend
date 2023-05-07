@@ -1,0 +1,35 @@
+.home{
+    text-align: center;
+}
+
+.textbox-link{
+    padding: 8px;
+    font-size: 13px;
+    width: 300px;
+    border-radius: 4px;
+    border-width: 1px;
+    border-color: #ccc;
+    margin-bottom: 16px;
+  }
+
+.btn{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 16px;
+    margin-top: 50px;
+  }
+  
+  .submitBtn{
+    padding: 8px 16px;
+    font-size: 16px;
+    border-radius: 4px;
+    border: none;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+  }
+  
+  .submitBtn:hover{
+    background-color: #0056b3;
+    transition-delay: 30ms;
+  }
