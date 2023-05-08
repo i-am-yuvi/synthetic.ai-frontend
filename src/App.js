@@ -1,11 +1,12 @@
 import './App.css';
 import logo from "./logo.jpg";
 import { useNavigate } from "react-router-dom";
+// import Home from './Home';
 
 function App() {
   let navigate = useNavigate(); 
   const routeChange = () =>{ 
-    let path = `./Home`; 
+    let path = "/home"; 
     navigate(path);
   }
 
@@ -26,5 +27,6 @@ function App() {
     
   );
 }
+
 
 export default App;
