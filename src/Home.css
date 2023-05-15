@@ -23,8 +23,27 @@
     border-radius: 4px;
     border-width: 1px;
     border-color: #ccc;
-    margin-bottom: 16px;
+    margin-bottom: 30px;
   }
+
+.titleName {
+  padding:10px;
+  font-weight: bold;
+}
+
+.dropdownTitle{
+  padding:10px;
+  margin-top: 60px;
+  margin-bottom: 2px;
+  font-weight: bold;
+}
+
+.dropdown-items{
+    padding:35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
 .btn{
     display: flex;
