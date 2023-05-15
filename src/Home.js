@@ -13,6 +13,7 @@ function Home() {
         {value:"linkedIn-post", label:"LinkedIn Post"},
         {value:"blog-ideas", label:"Blog Ideas"},
         {value:"blog-outline", label:"Blog Outline"},
+        {value:"blog-seo", label:"Blog Seo"},
         {value:"summary", label:"Summary"},
         {value:"rewrite-professional", label:"Rewrite in Professional Tone"},
         {value:"rewrite-empathetic", label:"Rewrite in Empathetic Tone"},
