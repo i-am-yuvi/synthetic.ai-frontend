@@ -1,0 +1,29 @@
+.generated-content {
+     width: 60%;
+     margin: auto;
+     margin-top: 40px;
+     padding: 20px;
+     border: 1px solid #ccc;
+     border-radius: 10px;
+     background-color: #fafafa;
+     align-items: center;
+ }
+ 
+ .generated-content h2 {
+     text-align: center;
+     color: #333;
+     margin-bottom: 20px;
+     
+ }
+ 
+ .generated-content ul {
+
+     list-style-type: disc;
+     padding-left: 40px;
+ }
+ .generated-content p {
+
+     margin-bottom: 10px;
+     line-height: 1.5;
+ }
+ 

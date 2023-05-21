@@ -3,12 +3,14 @@ import "./Home.css"
 import logo from "./logo.jpg";
 import Dropdown from "./Dropdown";
 import { useState } from 'react';
+import {useNavigate} from 'react-router-dom'
 
 
 function Home() {
     const [link, setLink] = useState('');
     const [option, setOption] = useState('');
     const [content, setContent] = useState('');
+    const navigate = useNavigate();
 
     const options = [
         {value:"tweet", label:"Tweet"},
@@ -35,20 +37,22 @@ function Home() {
     };
 
     const handleSubmit = () => {
-        fetch('http://localhost:5000/generate', {
+        fetch('https://5000-iamyuvi-syntheticaiback-5fhgso7ri0x.ws-us97.gitpod.io/generate', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
             },
-            body: JSON.stringify({ link, option })
+            body: JSON.stringify({ option, link })
         })
         .then(response => response.json())
         .then(data => {
-            setContent(data.content); // Set the content state to the received content
+            setContent(data.content); 
+            navigate('/generated', { state: { content: data.content} });
         })
         .catch((error) => {
             console.error('Error:', error);
         });
+
     };
 
 
@@ -71,12 +75,9 @@ function Home() {
             </div>
 
             <div className="btn">
-                <button className="submitBtn" onClick={handleSubmit}>Submit</button>
+                <button className="sbBtn" onClick={handleSubmit}>Submit</button>
             </div>
-            <div>
-                <h2>Generated Content</h2>
-                <p>{content}</p>
-            </div>
+
         </div>
     );
 }
