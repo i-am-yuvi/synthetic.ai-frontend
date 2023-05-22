@@ -37,7 +37,7 @@ function Home() {
     };
 
     const handleSubmit = () => {
-        fetch('https://5000-iamyuvi-syntheticaiback-5fhgso7ri0x.ws-us97.gitpod.io/generate', {
+        fetch('http://backend-service:5000', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
