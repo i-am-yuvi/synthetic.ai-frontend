@@ -37,7 +37,7 @@ function Home() {
     };
 
     const handleSubmit = () => {
-        fetch('http://backend-service:5000', {
+        fetch('http://backend-service/localhost:5000', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
