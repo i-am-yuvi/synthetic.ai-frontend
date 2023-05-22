@@ -1,0 +1,35 @@
+.spinner {
+     animation-name: spin;
+     animation-duration: 500ms;
+     animation-iteration-count: infinite;
+     animation-timing-function: linear;
+   }
+   
+@keyframes spin {
+     from {
+       transform: rotate(0deg);
+     }
+     to {
+       transform: rotate(360deg);
+     }
+}
+
+.submit-btn{
+     padding: 8px 16px;
+     font-size: 16px;
+     border-radius: 4px;
+     border: none;
+     background-color: #2fa08c;
+     color: white;
+     cursor: pointer;
+}
+
+.submit-btn:disabled {
+     padding: 8px 16px;
+     width: 75px;
+     border-radius: 4px;
+     border: none;
+     background: #13453c;
+     color: #ffffff;
+     cursor: not-allowed;
+}

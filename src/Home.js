@@ -4,6 +4,8 @@ import logo from "./logo.jpg";
 import Dropdown from "./Dropdown";
 import { useState } from 'react';
 import {useNavigate} from 'react-router-dom'
+import Button from './Button'
+
 
 
 function Home() {
@@ -11,6 +13,7 @@ function Home() {
     const [option, setOption] = useState('');
     const [content, setContent] = useState('');
     const navigate = useNavigate();
+    const [showLoader, setShowLoader] = useState(false)
 
     const options = [
         {value:"tweet", label:"Tweet"},
@@ -37,6 +40,7 @@ function Home() {
     };
 
     const handleSubmit = () => {
+        setShowLoader(true)
         fetch('http://backend-service:5000', {
             method: 'POST',
             headers: {
@@ -66,7 +70,7 @@ function Home() {
 
             <h2 className="titleName">Enter the link below </h2>
 
-            <TextField className="textbox-link" label="Enter link" variant="outlined" value={link} onChange={handleLinkChange}/>
+            <TextField className="textbox-link" label="Enter link" variant="filled" value={link} onChange={handleLinkChange}/>
 
             <h2 className="dropdownTitle">Now Select the Content from the Dropdown!</h2>
 
@@ -75,7 +79,11 @@ function Home() {
             </div>
 
             <div className="btn">
-                <button className="sbBtn" onClick={handleSubmit}>Submit</button>
+                <Button text='Generate' 
+                onSubmit={handleSubmit} 
+                loading={showLoader} 
+                disabled={showLoader}
+                />
             </div>
 
         </div>
