@@ -40,7 +40,7 @@ function Home() {
 
     const handleSubmit = () => {
         setShowLoader(true)
-        fetch('http://backend-service:5000', {
+        fetch('http://backend-service:5000/generate', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
