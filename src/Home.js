@@ -7,7 +7,6 @@ import {useNavigate} from 'react-router-dom'
 import Button from './Button'
 
 
-
 function Home() {
     const [link, setLink] = useState('');
     const [option, setOption] = useState('');
